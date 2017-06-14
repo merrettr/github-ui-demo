@@ -12,16 +12,17 @@ export default async ({ endpoint }) => {
   const linkString = response.headers.get('Link');
   const links = {};
 
-  linkString && linkString.split(',').forEach(link => {
-    const sections = link.split(';');
+  linkString &&
+    linkString.split(',').forEach(link => {
+      const sections = link.split(';');
 
-    const url = sections[0].replace(/<(.*)>/, '$1').trim();
-    const name = sections[1].replace(/rel="(.*)"/, '$1').trim();
-    links[name] = url;
-  });
+      const url = sections[0].replace(/<(.*)>/, '$1').trim();
+      const name = sections[1].replace(/rel="(.*)"/, '$1').trim();
+      links[name] = url;
+    });
 
   return {
     links,
     data: json.items ? json.items : json,
   };
-}
+};

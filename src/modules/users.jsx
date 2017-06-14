@@ -14,22 +14,22 @@ export const searchUsers = createAction(SEARCH_USERS);
 // selectors
 export const selectIsFetching = createSelector(
   state => state.users.isFetching,
-  isFetching => isFetching,
+  isFetching => isFetching
 );
 
 export const selectError = createSelector(
   state => state.users.error,
-  error => error,
+  error => error
 );
 
 export const selectSearchTerm = createSelector(
   state => state.users.searchTerm,
-  searchTerm => searchTerm,
+  searchTerm => searchTerm
 );
 
 export const selectUsers = createSelector(
   state => state.users.data,
-  users => users,
+  users => users
 );
 
 // sagas
@@ -51,9 +51,7 @@ function* onSearchUsers({ payload }) {
   }
 }
 
-export const sagas = [
-  takeLatest(SEARCH_USERS, onSearchUsers),
-];
+export const sagas = [takeLatest(SEARCH_USERS, onSearchUsers)];
 
 // reducer
 const initialState = {
@@ -89,4 +87,4 @@ export default (state = initialState, { type, payload, response, error }) => {
     default:
       return state;
   }
-}
+};

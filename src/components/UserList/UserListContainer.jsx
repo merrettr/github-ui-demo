@@ -3,7 +3,11 @@ import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import withSpinner from '../hoc/withSpinner';
 import withError from '../hoc/withError';
-import { selectIsFetching, selectError, selectUsers } from '../../modules/users';
+import {
+  selectIsFetching,
+  selectError,
+  selectUsers,
+} from '../../modules/users';
 import UserList from './UserList';
 
 export default compose(
@@ -14,5 +18,5 @@ export default compose(
   })),
   withRouter,
   withSpinner(),
-  withError,
+  withError
 )(UserList);

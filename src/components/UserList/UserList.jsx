@@ -2,7 +2,7 @@ import React from 'react';
 import { ListGroup, ListGroupItem, Col } from 'react-bootstrap';
 import User from './User';
 
-export default ({ users, history: { push }}) =>
+export default ({ users, history: { push } }) =>
   <ListGroup style={{ marginTop: '1em' }}>
     {users.map(user =>
       <Col
@@ -15,5 +15,6 @@ export default ({ users, history: { push }}) =>
         <ListGroupItem>
           <User {...user} />
         </ListGroupItem>
-      </Col>)}
-  </ListGroup>
+      </Col>
+    )}
+  </ListGroup>;

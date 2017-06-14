@@ -6,9 +6,7 @@ import reducer, { sagas } from '../modules';
 export default initialState => {
   const sagaMiddleware = createSagaMiddleware();
 
-  const middleware = [
-    sagaMiddleware,
-  ];
+  const middleware = [sagaMiddleware];
 
   if (process.env.NODE_ENV === 'development') {
     middleware.push(logger);
@@ -23,4 +21,4 @@ export default initialState => {
   sagaMiddleware.run(sagas);
 
   return store;
-}
+};

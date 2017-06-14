@@ -6,4 +6,4 @@ export default ({ error }) =>
     <Panel header="Uh Oh" bsStyle="danger">
       {error}
     </Panel>
-  </div>
+  </div>;

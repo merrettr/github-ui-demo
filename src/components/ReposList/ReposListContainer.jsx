@@ -2,7 +2,11 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import withSpinner from '../hoc/withSpinner';
 import withError from '../hoc/withError';
-import { selectIsFetching, selectError, selectRepos } from '../../modules/repos';
+import {
+  selectIsFetching,
+  selectError,
+  selectRepos,
+} from '../../modules/repos';
 import ReposList from './ReposList';
 
 export default compose(
@@ -12,5 +16,5 @@ export default compose(
     repos: selectRepos(state),
   })),
   withSpinner(),
-  withError,
+  withError
 )(ReposList);

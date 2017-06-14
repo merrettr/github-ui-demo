@@ -8,4 +8,4 @@ export default () =>
     <ReposSearch />
     <ReposList />
     <ReposPagination />
-  </div>
+  </div>;

@@ -1,6 +1,11 @@
 import React from 'react';
 import { Grid } from 'react-bootstrap';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import ReposPage from './ReposPage';
 import UsersPage from './UsersPage';
@@ -9,10 +14,10 @@ export default () =>
   <Router>
     <Grid>
       <div style={{ marginBottom: '1em' }}>
-        <Navigation/>
+        <Navigation />
       </div>
 
-      <div style={{ margin: '1em 0'}}>
+      <div style={{ margin: '1em 0' }}>
         <Switch>
           <Redirect from="/" exact to="/repos" />
 
@@ -21,4 +26,4 @@ export default () =>
         </Switch>
       </div>
     </Grid>
-  </Router>
+  </Router>;

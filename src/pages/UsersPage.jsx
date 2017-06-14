@@ -6,4 +6,4 @@ export default () =>
   <div>
     <UserSearch />
     <UserList />
-  </div>
+  </div>;

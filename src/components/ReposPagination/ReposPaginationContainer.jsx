@@ -12,14 +12,17 @@ import {
 import ReposPagination from './ReposPagination';
 
 export default compose(
-  connect(state => ({
-    isFetching: selectIsFetching(state),
-    first: selectFirstLink(state),
-    last: selectLastLink(state),
-    next: selectNextLink(state),
-    previous: selectPreviousLink(state),
-  }), {
-    onClick: followReposLink,
-  }),
-  withSpinner(true),
-)(ReposPagination)
+  connect(
+    state => ({
+      isFetching: selectIsFetching(state),
+      first: selectFirstLink(state),
+      last: selectLastLink(state),
+      next: selectNextLink(state),
+      previous: selectPreviousLink(state),
+    }),
+    {
+      onClick: followReposLink,
+    }
+  ),
+  withSpinner(true)
+)(ReposPagination);

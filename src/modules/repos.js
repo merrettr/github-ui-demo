@@ -18,42 +18,36 @@ const selectLinks = state => state.repos.links;
 
 export const selectIsFetching = createSelector(
   state => state.repos.isFetching,
-  isFetching => isFetching,
+  isFetching => isFetching
 );
 
 export const selectError = createSelector(
   state => state.repos.error,
-  error => error,
+  error => error
 );
 
 export const selectSearchTerm = createSelector(
   state => state.repos.searchTerm,
-  searchTerm => searchTerm,
+  searchTerm => searchTerm
 );
 
 export const selectRepos = createSelector(
   state => state.repos.data,
-  repos => repos,
+  repos => repos
 );
 
 export const selectFirstLink = createSelector(
   selectLinks,
-  ({ first }) => first,
+  ({ first }) => first
 );
 
-export const selectLastLink = createSelector(
-  selectLinks,
-  ({ last }) => last,
-);
+export const selectLastLink = createSelector(selectLinks, ({ last }) => last);
 
-export const selectNextLink = createSelector(
-  selectLinks,
-  ({ next }) => next,
-);
+export const selectNextLink = createSelector(selectLinks, ({ next }) => next);
 
 export const selectPreviousLink = createSelector(
   selectLinks,
-  ({ prev }) => prev,
+  ({ prev }) => prev
 );
 
 // sagas
@@ -74,7 +68,9 @@ function* fetchRepos(endpoint) {
 }
 
 function* onSearchRepos({ payload }) {
-  yield* fetchRepos(`https://api.github.com/search/repositories?q=${payload} in:name&sort=stars&order=desc`);
+  yield* fetchRepos(
+    `https://api.github.com/search/repositories?q=${payload} in:name&sort=stars&order=desc`
+  );
 }
 
 function* onFollowLink({ payload }) {
@@ -126,4 +122,4 @@ export default (state = initialState, { type, payload, response, error }) => {
     default:
       return state;
   }
-}
+};

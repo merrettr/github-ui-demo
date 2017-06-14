@@ -2,7 +2,7 @@ import React from 'react';
 import { FormControl } from 'react-bootstrap';
 
 export default ({ isSearching, search, defaultValue }) => {
-  const onKeyDown = ({ keyCode, target: { value }}) => {
+  const onKeyDown = ({ keyCode, target: { value } }) => {
     if (keyCode === 13) {
       search(value);
     }
@@ -16,5 +16,5 @@ export default ({ isSearching, search, defaultValue }) => {
       defaultValue={defaultValue}
       disabled={isSearching}
     />
-  )
-}
+  );
+};

@@ -13,7 +13,12 @@ export default ({
     <Row style={{ display: 'flex', paddingBottom: '1em' }}>
       <div style={{ flex: 1 }}>
         <img src={avatarUrl} width="30" height="30" alt="Repo Owner" />
-        <a style={{ marginLeft: '.8em' }} href={htmlUrl} target="_blank" rel="noopener noreferrer">
+        <a
+          style={{ marginLeft: '.8em' }}
+          href={htmlUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {fullName}
         </a>
       </div>
@@ -23,11 +28,13 @@ export default ({
       </div>
     </Row>
 
-    <Row style={{
-      color: '#586069',
-      fontSize: '.85em',
-      opacity: .8,
-    }}>
+    <Row
+      style={{
+        color: '#586069',
+        fontSize: '.85em',
+        opacity: 0.8,
+      }}
+    >
       <Col md={6} xs={12}>
         <span>Created: {createdAt}</span>
       </Col>
@@ -35,4 +42,4 @@ export default ({
         <span>Last commit: {pushedAt}</span>
       </Col>
     </Row>
-  </Grid>
+  </Grid>;
