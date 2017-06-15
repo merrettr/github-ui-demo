@@ -14,4 +14,4 @@ export default connect(
   {
     search: searchRepos,
   }
-)(Search);
+)(Search('try react or redux'));

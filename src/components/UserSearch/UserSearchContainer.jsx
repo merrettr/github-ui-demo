@@ -14,4 +14,4 @@ export default connect(
   {
     search: searchUsers,
   }
-)(Search);
+)(Search('try gaearon or taylorotwell'));

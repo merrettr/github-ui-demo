@@ -1,4 +1,5 @@
 import React from 'react';
+import { ProgressBar } from 'react-bootstrap';
 
 export default () =>
   <div
@@ -9,5 +10,5 @@ export default () =>
       height: '5em',
     }}
   >
-    Loading...
+    <ProgressBar style={{ flex: 0.25 }} active now={100} />
   </div>;

@@ -9,6 +9,7 @@ import {
 import Navigation from '../components/Navigation';
 import ReposPage from './ReposPage';
 import UsersPage from './UsersPage';
+import UserPage from './UserPage';
 
 export default () =>
   <Router>
@@ -23,6 +24,7 @@ export default () =>
 
           <Route exact path="/repos" component={ReposPage} />
           <Route exact path="/users" component={UsersPage} />
+          <Route exact path="/users/:slug" component={UserPage} />
         </Switch>
       </div>
     </Grid>

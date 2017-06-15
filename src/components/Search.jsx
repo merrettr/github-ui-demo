@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormControl } from 'react-bootstrap';
 
-export default ({ isSearching, search, defaultValue }) => {
+export default hint => ({ isSearching, search, defaultValue }) => {
   const onKeyDown = ({ keyCode, target: { value } }) => {
     if (keyCode === 13) {
       search(value);
@@ -11,7 +11,7 @@ export default ({ isSearching, search, defaultValue }) => {
   return (
     <FormControl
       type="text"
-      placeholder="Search for a keyword - try react or redux"
+      placeholder={`Search for a keyword - ${hint}`}
       onKeyDown={onKeyDown}
       defaultValue={defaultValue}
       disabled={isSearching}
