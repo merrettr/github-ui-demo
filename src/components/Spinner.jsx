@@ -10,5 +10,7 @@ export default () =>
       height: '5em',
     }}
   >
-    <ProgressBar style={{ flex: 0.25 }} active now={100} />
+    <div style={{ width: '25%' }}>
+      <ProgressBar active now={100} />
+    </div>
   </div>;
