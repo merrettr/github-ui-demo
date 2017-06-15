@@ -10,8 +10,9 @@ export default connect(
   state => ({
     isSearching: selectIsFetching(state),
     defaultValue: selectSearchTerm(state),
+    hint: 'try gaearon or taylorotwell',
   }),
   {
     search: searchUsers,
   }
-)(Search('try gaearon or taylorotwell'));
+)(Search);

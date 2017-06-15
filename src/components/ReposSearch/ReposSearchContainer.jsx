@@ -10,8 +10,9 @@ export default connect(
   state => ({
     isSearching: selectIsFetching(state),
     defaultValue: selectSearchTerm(state),
+    hint: 'try react or redux',
   }),
   {
     search: searchRepos,
   }
-)(Search('try react or redux'));
+)(Search);
